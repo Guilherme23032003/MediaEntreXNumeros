@@ -1,14 +1,17 @@
-﻿double numero1, numero2, resultado;
+﻿double numero, resultado, soma = 0.0;
+int quantidade;
 
-Console.Write("informe o primeiro numero: ");
+Console.WriteLine("informe a quantia de numeros que participarão do calculo de media");
 
-numero1 = double.Parse(Console.ReadLine());
+quantidade = int.Parse(Console.ReadLine());
 
-Console.Write("agora, informe o segundo numero da equação: ");
+for (int nmr = 1; nmr <= quantidade;  nmr++)
+{
+    Console.WriteLine("informe o valor de numero #" + nmr);
+    numero= double.Parse(Console.ReadLine());
+    // += acrescenta o valor dele (soma) + o valor do numero
+    soma += numero;
+}
+resultado =  soma / quantidade;
 
-numero2= double.Parse(Console.ReadLine()); 
-
-resultado = (numero2 + numero1)/2;
-Console.Write("\n\n\na media dos numeros é: " + resultado);
-
-
+Console.WriteLine("\n\n\na media dos numeros fornecidos é igual a: " + resultado);
